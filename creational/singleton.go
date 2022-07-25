@@ -4,15 +4,12 @@ import "sync"
 
 type Singleton struct {
 	name string
-}
-
-func (s *Singleton) String() string {
-	return s.name
+	val  int
 }
 
 func NewSingleton() *Singleton {
 	once.Do(func() {
-		instance = &Singleton{name: "test"}
+		instance = &Singleton{name: "test", val: 1}
 	})
 	return instance
 }
