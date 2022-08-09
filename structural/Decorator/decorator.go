@@ -9,6 +9,7 @@ type PizzaHub struct {
 
 func (p *PizzaHub) GetPrice() int {
 	return 10
+
 }
 
 type TomatoTopping struct {
